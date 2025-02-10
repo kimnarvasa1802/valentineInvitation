@@ -1,0 +1,101 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    background-color: var(--background-color) !important;
+    color: var(--default-text-color-color) !important;
+    /* background-image: url('/Images/AIAJOBApplicationBg.png');
+    background-size: cover; 
+    background-position: center center;
+    background-attachment: fixed; 
+    height: 100vh;
+    margin: 0; 
+    overflow: hidden;
+    position: relative; */
+}
+
+.image-hero {
+    background-color: #303030 !important;
+    background-image: url('/Images/AIAJOBApplicationBg.png');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: relative; /* Ensure relative positioning */
+}
+
+    .image-hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 0; /* Bring it above the background image */
+    }
+
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root {
+    --background-color: #FF69B4; /* Light Gray background for the entire website */
+    --main-color: #d11345;
+    --sub-color: #3b7ddd;
+    --default-text-color: #fff;
+}
+::-webkit-scrollbar {
+    width: 5px; /* Width of the vertical scrollbar */
+    height: 5px; /* Height of the horizontal scrollbar */
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color); /* Use --main-color for the thumb */
+    border-radius: 10px; /* Roundness of the scrollbar thumb */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition */
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(var(--main-color), 0.8); /* Slight transparency on hover */
+    }
+
+    ::-webkit-scrollbar-thumb:active {
+        background-color: rgba(var(--main-color), 0.6); /* More transparency when active */
+    }
+
+::-webkit-scrollbar-track {
+    background: transparent !important; /* Fully transparent track */
+}
+
+#no-btn {
+    position: absolute;
+    transition: transform 0.1s ease-in-out;
+}
+
+
+.btn-no {
+    position: absolute !important;
+    transition: all 0.5s ease !important;
+}
+.btn-yes {
+    position: relative !important;
+    left: -40px !important; /* Move 100px to the left */
+}
